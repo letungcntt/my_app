@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
             itemBuilder: (context, index) {
               return Image.network(
                 data[index]['photo'],
-                width: 120, height: 120,
+                width: 120, height: 120
               );
             } 
           )
