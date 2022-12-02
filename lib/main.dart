@@ -1,6 +1,9 @@
 // ignore_for_file: avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
+import 'package:my_app/center.dart';
+import 'package:my_app/left.dart';
+import 'package:my_app/top.dart';
 import 'test.dart';
 
 void main() {
@@ -48,19 +51,19 @@ class _MyHomePageState extends State<MyHomePage> {
     return MaterialApp(
       title: 'Video Demo',
       home: Scaffold(
-        body: Container(
-          child: ListView.builder(
-            itemCount: data.length,
-            itemBuilder: (context, index) {
-              return Image.network(
-                data[index]['photo'],
-                width: 120, height: 120,
-              );
-            } 
-          )
-        ),
+        body: Column(
+          children: [
+            const Top(),
+            Row(
+              // ignore: prefer_const_literals_to_create_immutables
+              children: [
+                const Left(),
+                const CenterWidget()
+              ],
+            )
+          ],
+        )
       ),
     );
   }
-
 }
