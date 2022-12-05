@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_print
-
 import 'package:flutter/material.dart';
 import 'package:my_app/test.dart';
 
@@ -22,8 +20,7 @@ class _CenterWidgetState extends State<CenterWidget> {
 
   @override
   Widget build(BuildContext context) {
-    print(123213);
-    return Container(
+    return SizedBox(
       width: 150, height: 500,
       child: ListView.builder(
         itemCount: data.length,
