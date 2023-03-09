@@ -13,7 +13,7 @@ class ShowSearchAction extends Action<ShowSearchIntent> {
 
   @override
   void invoke(ShowSearchIntent intent) {
-    function(intent.visible);  
+    function(intent.visible);  fgsdfgsdfgsdf
   }
 }
 
